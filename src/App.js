@@ -14,6 +14,7 @@ import { NewSky } from "./components/NewSky";
 import { Palm } from "./components/Palm"
 
 
+
 function App() {
 
 const [objects, setObjects] = useState([]);

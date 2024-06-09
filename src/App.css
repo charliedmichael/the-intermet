@@ -49,6 +49,13 @@ input {
   outline: solid;
 }
 
+_::-webkit-full-page-media, _:future, :root .input {
+
+  outline-width: thin;
+  outline: none;
+
+}
+
 input:focus {
   outline: none;
   background-color: white;
@@ -137,6 +144,12 @@ button:hover {
   color:black;
 }
 
+_::-webkit-full-page-media, _:future, :root #searchInput {
+
+  outline-width: 2px;
+
+}
+
 ::-webkit-input-placeholder {
   color:black;
 
@@ -180,6 +193,11 @@ button:hover {
 
 }
 
+_::-webkit-full-page-media, _:future, :root .main-container {
+
+  border-width: 2px;
+}
+
 .artist-container {
   margin-top: 3.5rem;
   display: inline-block;
@@ -190,9 +208,19 @@ button:hover {
   font-size: 5rem;
   font-weight: bold;
   letter-spacing: -2px;
+  /* line-height: 75%;  */
   padding-right:15px;
   padding-left:10px;
   border-bottom: solid;
+
+}
+
+_::-webkit-full-page-media, _:future, :root .title {
+
+  letter-spacing: -5px;
+  border-width: 2px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 
 }
 
@@ -200,6 +228,13 @@ button:hover {
   border-bottom: solid;
   padding-top: 5px;
   padding-bottom: 5px;
+
+}
+
+_::-webkit-full-page-media, _:future, :root .subtitle {
+
+  border-width: 2px;
+
 
 }
 
@@ -337,7 +372,13 @@ button:hover {
   text-align: left;
   color: white;
   white-space: nowrap;
-  
+
+}
+
+_::-webkit-full-page-media, _:future, :root .signTitle {
+
+  letter-spacing: -1.25px;
+
 
 }
 
