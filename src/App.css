@@ -88,6 +88,11 @@ button {
   padding-bottom: 5.5px;
 }
 
+_::-webkit-full-page-media, _:future, :root button {
+
+  margin-bottom: -1px;
+}
+
 button:hover {
   color: black;
   background-color: white;
