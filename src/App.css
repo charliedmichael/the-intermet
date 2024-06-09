@@ -1,38 +1,355 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: AppleGaramond;
+  src: url(fonts/AppleGaramond.ttf);
+  font-family: AGLight;
+  src: url(fonts/AppleGaramond-Light.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
+.UI {
+  text-align: center;
+  /* background-color: rgb(227, 227, 227); */
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 15;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.hide {
+  display: none;
+}
+
+.screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  /* border-bottom: solid; */
+  font-size: medium;
+  /* height: 30px; */
+  z-index: 10;
+}
+
+.nav > div {
+  height: 30px;
+}
+
+input {
+  padding-left: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  height: 28.5px;
+  outline: solid;
+}
+
+input:focus {
+  outline: none;
+  background-color: white;
+  height: 30px;
+}
+
+input:hover {
+  background-color: white;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  /* height: 30px; */
+  width: 100%;
+  font-size: medium;
+  padding-top: 6px;
+  padding-bottom: 5.5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  color: black;
+  background-color: white;
+}
+
+#searching {
+
+  background: linear-gradient(90deg, black, black, white, white, white);
+  background-size: 400% 100%;
+
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  animation: Animation 5s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:0% 0%}
+  50%{background-position:100% 0%}
+  100%{background-position:0% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:0% 0%}
+  50%{background-position:100% 0%}
+  100%{background-position:0% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 0%}
+  100%{background-position:0% 0%}
+}
+
+#searchingContent {
+  mix-blend-mode: difference;
+}
+
+.welcome {
+  padding-left: 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-right: solid;
+
+}
+
+.searchBar {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  color:black;
+}
+
+#searchInput {
+  color:black;
+}
+
+::-webkit-input-placeholder {
+  color:black;
+
+}
+
+.results {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: white;
+
+}
+
+.results > div {
+  display: flex;
+  padding-left: 5px;
+  justify-content: start;
+  align-items: center;
+}
+
+.resultBox {
+  /* max-height: 100vh; */
+  height: 100%;
+  overflow: scroll;
+}
+
+.main-container {
+  background-color: white;
+  margin: auto;
+  /* margin-top: 25vh; */
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start; */
+  width: 375px;
+  border-style: solid;
+  /* box-shadow: -20px 20px 30px #444444; */
+
+}
+
+.artist-container {
+  margin-top: 3.5rem;
+  display: inline-block;
+}
+
+.title {
+  font-family: AGLight;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  padding-right:15px;
+  padding-left:10px;
+  border-bottom: solid;
+
+}
+
+.subtitle {
+  border-bottom: solid;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.controls {
+  width: 375px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: black;
+  color: white;
+  z-index: 15;
+  padding: 5px;
+}
+
+.controlsTitle {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body {
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.search-bar-container {
+  width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-width: 200px;
+
+}
+
+.search-result-container {
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-width: 200px;
+  /* border-style: solid; */
+  /* position:relative; */
+}
+
+.search-result-list {
+  background-color: white;
+  margin: auto;
+  /* border-bottom: solid;
+  border-left: solid; */
+  width: 100%;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+}
+
+.button-type {
+  font-family: AGLight;
+  background-color: transparent;
+  /* border: none; */
+  /* height: 100%; */
+  font-size: 20px;
+  /* width: 100%; */
+  
+}
+
+.label {
+  font-size: 3px;
+  font-weight: lighter;
+  background-color: white;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  z-index: 0;
+  text-align: left;
+
+}
+
+.labelTitle {
+  font-weight: bold;
+}
+
+.labelLine {
+  display:block;
+}
+
+.sign {
+  position: absolute;
+  left: 0px;
+  font-size: 3px;
+  font-weight: lighter;
+  background-color: black;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 0.5px;
+  padding-bottom: 3px;
+  /* z-index: 0; */
+  text-align: left;
+  transform: scale(8);
+
+}
+
+.signGroup {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.signTitle {
+  font-family: AGLight;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: -0.25px; 
+  line-height: 95%; 
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  /* z-index: 0; */
+  text-align: left;
   color: white;
+  white-space: nowrap;
+  
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signInfo {
+  font-size: 3px;
+  font-weight: lighter;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  /* z-index: 0; */
+  text-align: left;
+  color: white;
+  
 }
