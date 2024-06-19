@@ -5,6 +5,14 @@
   src: url(fonts/AppleGaramond-Light.ttf);
 }
 
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
 .UI {
   text-align: center;
   /* background-color: rgb(227, 227, 227); */
@@ -272,6 +280,19 @@ _::-webkit-full-page-media, _:future, :root .subtitle {
 
   padding-top: 10px;
   padding-bottom: 10px;
+
+}
+
+.credit {
+  border-top: solid;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+_::-webkit-full-page-media, _:future, :root .credit {
+
+  border-width: 2px;
+
 
 }
 

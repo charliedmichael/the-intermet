@@ -141,7 +141,7 @@ function Floor(props) {
         shadow-radius={0.2}
         shadow-bias={-0.001} 
         shadow-mapSize={[1024, 1024]}
-        position={[0, 40, 0]} 
+        position={[0, 51, 0]} 
         intensity={3.5} 
         color="#fff" />
 
@@ -188,6 +188,9 @@ function Floor(props) {
             in the gallery, just type something into the search to see what the Met has to show.
             Need ideas? Try basic old school names like Mary, John, Jean, James, Henri, Paul, Charles, or Pierre.
             Or just try the name of a country, region, or culture, like France, Japan, Africa or Inca.
+          </div>
+          <div className="credit">
+            designed by <a href="https://charliemichael.site">Charlie Michael</a>
           </div>
         </div>
 
