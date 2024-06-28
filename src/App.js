@@ -163,7 +163,6 @@ function Floor(props) {
           <div className="results">
             <div>
               {noImages? 'NO IMAGES' : 'NOW SHOWING' }
-              {/* NOW SHOWING */}
             </div>
             <div>
               {searchValue}&nbsp;({objects.length})
@@ -182,7 +181,7 @@ function Floor(props) {
           <div className="subtitle">
             The Met on the Internet
           </div>
-          <div className="body">
+          <div className="introBody">
             Welcome to a virtual gallery of the Metropolitan Museum of Art's open access artwork&#8212;a collection 
             of 5,000 years of art from around the world. Over 470,000 pieces are available to view
             in the gallery, just type something into the search to see what the Met has to show.
@@ -200,7 +199,17 @@ function Floor(props) {
         <div className="controlsTitle">
           <div>C</div><div>O</div><div>N</div><div>T</div><div>R</div><div>O</div><div>L</div><div>S</div>  
         </div>
-        <div className="controlsRow">&nbsp;</div>
+        <div className="controlsRow">
+          <div>
+            &#128065;
+          </div>
+          <div>
+            Use Mouse to Look
+          </div>
+          <div>
+            &#128065;
+          </div>
+        </div>
         <div className="controlsRow">
             <div>
               <div>W</div>
